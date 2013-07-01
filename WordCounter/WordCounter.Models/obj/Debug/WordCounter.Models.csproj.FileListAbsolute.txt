@@ -1,0 +1,5 @@
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.Models\bin\Debug\WordCounter.Models.dll
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.Models\bin\Debug\WordCounter.Models.pdb
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.Models\obj\Debug\WordCounter.Models.csprojResolveAssemblyReference.cache
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.Models\obj\Debug\WordCounter.Models.dll
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.Models\obj\Debug\WordCounter.Models.pdb

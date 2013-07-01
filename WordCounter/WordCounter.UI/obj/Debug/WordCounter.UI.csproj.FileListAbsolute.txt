@@ -1,0 +1,17 @@
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\bin\Debug\WordCounter.UI.exe.config
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\bin\Debug\WordCounter.UI.exe
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\bin\Debug\WordCounter.UI.pdb
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI.csprojResolveAssemblyReference.cache
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\MainWindow.g.cs
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\App.g.cs
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI_MarkupCompile.cache
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI_MarkupCompile.lref
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\MainWindow.baml
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI.g.resources
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI.Properties.Resources.resources
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI.csproj.GenerateResource.Cache
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI.exe
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\obj\Debug\WordCounter.UI.pdb
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\bin\Debug\WordCounter.Models.dll
+C:\Users\Oleksandr\Dropbox\Projects\WordCounter\WordCounter.UI\bin\Debug\WordCounter.Models.pdb

@@ -1,0 +1,86 @@
+﻿<Window x:Class="WordCounter.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:ui="clr-namespace:WordCounter.UI"
+        Title="Word counter" Height="350" Width="525">
+    <Window.DataContext>
+        <ui:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto" MaxHeight="300"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox ToolTip="Path to the file." Margin="5" Text="{Binding Path=PathToFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button Grid.Column="1" Margin="5" Command="{Binding Path=ChooseFileCommand}" Content="Choose file" Width="70" ToolTip="Allows to choose file thru dialog."/>
+        <Button Grid.Column="2" Margin="5" Command="{Binding Path=CountWordsCommand}" Content="Count" Width="70" ToolTip="Counts repeat occasions of word in the file."/>
+
+        <ListView Margin="5" ItemsSource="{Binding Path=Results}" Grid.Row="1" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView AllowsColumnReorder="True">
+                    <GridViewColumn Header="Word" Width="220" DisplayMemberBinding="{Binding Path=Word}" />
+                    <GridViewColumn Header="Repeated count" Width="100" DisplayMemberBinding="{Binding Path= Count}" />
+                </GridView>
+            </ListView.View>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+
+        <ListView Margin="5" ItemsSource="{Binding Path=InfoResults}" Grid.Row="2" Grid.ColumnSpan="3"
+                  Visibility="{Binding IsShowInfo,Converter={StaticResource BoolToVisibilityConverter}}" MinHeight="50"/>
+
+        <Expander ExpandDirection="Left" ToolTip="Settings" Grid.Column="3" Grid.RowSpan="2" MaxWidth="300" >
+            <StackPanel>
+                <GroupBox Padding="10" Header="Strategies" VerticalAlignment="Top">
+                    <ItemsControl ItemsSource="{Binding Strategies}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <RadioButton GroupName="Strategies" 
+                                             Content="{Binding Content.Name }" 
+                                             IsChecked="{Binding IsSelected, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </GroupBox>
+
+                <GroupBox Header="Other">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Limit result to N items"/>
+                            <TextBox Text="{Binding Path=LimitResultTo,UpdateSourceTrigger=PropertyChanged,Mode=OneWayToSource}" 
+                                     HorizontalAlignment="Right" Grid.Column="1" Width="40"/>
+                        </Grid>
+                        <CheckBox Grid.Row="1" Content="Add to result memory usage info" IsChecked="{Binding Path=IsShowMemory}"/>
+                        <CheckBox Grid.Row="2" Content="Add to result speed info" IsChecked="{Binding Path=IsShowSpeed}"/>
+                        <Button Grid.Row="3" HorizontalAlignment="Right" Content="GC Clean" Width="70" Command="{Binding Path=GCCleanCommand}"/>
+                    </Grid>
+                </GroupBox>
+            </StackPanel>
+        </Expander>
+    </Grid>
+</Window>
